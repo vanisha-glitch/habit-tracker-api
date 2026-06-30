@@ -9,7 +9,8 @@ def get_engine():
     database_url = os.getenv("DATABASE_URL")
     if not database_url:
         raise Exception("DATABASE_URL not found in environment")
-    return create_engine(database_url, pool_pre_ping=True)
+    return create_engine(database_url, pool_pre_ping=True, 
+   )
 
 engine = get_engine()
 
